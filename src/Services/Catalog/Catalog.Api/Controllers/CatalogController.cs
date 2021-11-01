@@ -75,7 +75,7 @@ namespace Catalog.Api.Controllers
             {
                 await _productRepository.CreateProduct(product);
 
-                return CreatedAtRoute(nameof(GetProductById), new { id = product.Id }, product);
+                return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
             }
             catch (System.Exception)
             {
